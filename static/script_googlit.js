@@ -23,7 +23,7 @@ window.onload = async function(){
 	console.log(qwerty['q']);
 	if (!qwerty['q']) 
 	{
-		qwerty['q'] = "emrekucukkaya.github.io";
+		qwerty['q'] = "kardandon.github.io";
 	}
 	param = document.querySelector('input');
 	param.value = "";
