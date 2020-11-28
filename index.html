@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <title>Emre Kucukkaya</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="height: 100vh">
+
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: black;">
+  <div class="container-fluid">
+    <div class="navbar-header text-center">
+      <a class="navbar-brand" style="color: white" href="https://emrekucukkaya.github.io/">Emre Küçükkaya</a>
+    </div>
+    <ul class="nav navbar-nav" style="float: right">
+      <li class="dropdown">
+	  <a class="dropdown-toggle" data-toggle="dropdown" data-target="#navi" href="#">Some Staff<span class="caret"></span></a>
+	  <ul class="dropdown-menu">
+        <li><a href="/facemash.html">Face Mash</a></li>
+		<li><a href="/googlit.html">Google IT!</a></li>
+		<li><a href="http://berkcanbet42.herokuapp.com">EE Quiz Betting</a></li>
+		<li><a href="https://github.com/kardandon/">Github</a></li>
+	   </ul>
+	  </li>
+      <li><a href="https://github.com/kardandon/">About</a></li>
+    </ul>
+      
+  </div>
+</nav>
+<style>
+body {
+  font-family: Arial;
+  color: white;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  background-color: white;
+}
+.split:hover {
+	background-color: black;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  height: 150px;
+}
+</style>
+<a href="https://www.linkedin.com/in/izzet-emre-kucukkaya/">
+<div class="split left">
+  <div class="centered">
+    <img id="img-1" src="">
+    <h2>Linkedin</h2>
+    <p>Emre Küçükkaya</p>
+  </div>
+</div>
+</a>
+<a href="https://twitter.com/yogurtseverim">
+<div class="split right">
+  <div class="centered">
+    <img id="img-2" src="">
+    <h2>Twitter</h2>
+    <p>@yogurtseverim</p>
+  </div>
+</div>
+</a>
+<script>
+img1 = new Image()
+img2 = new Image()
+img1.src = "/static/linkedin.png?n=1";
+img2.src = "/static/twitter.png";
+img1.onload = function () {
+	document.querySelector('#img-1').src = img1.src;
+};
+img2.onload = function () {
+	document.querySelector('#img-2').src = img2.src;
+};
+</script>
+</body>
+</html>
