@@ -73,16 +73,39 @@
 				</a>
 	</div>
 	<script>
-		var img = new Image();
-		img.src = "https://thispersondoesnotexist.com";
-		window.setTimeout(function () {
-		var img2 = new Image();
-		img2.src = "https://thispersondoesnotexist.com?cache=" + new Date().getTime();
-		img2.onload = function() {
-			document.querySelector('img[name="firstpic"]').src = img.src;
-			document.querySelector('img[name="secondpic"]').src = img2.src;
-		};
-			}, 1000);
+		    var image1Loaded = false;
+    var image2Loaded = false;
+
+    var img = new Image();
+    img.name = "firstpic";
+    img.style = "width:40%; height:40%;"
+    
+    img.src = "https://thispersondoesnotexist.com?cache=" + Math.random();
+
+    var img2 = new Image();
+    img2.name = "firstpic";
+    img2.style = "width:40%; height:40%;"
+    img.onload = function() {
+        image1Loaded = true;
+        img2.src = "https://thispersondoesnotexist.com?cache=" + Math.random();
+
+        imagesLoaded();
+    };
+    img2.onload = function() {
+        image2Loaded = true;
+        imagesLoaded();
+    };
+
+    function imagesLoaded() {
+        if (image1Loaded && image2Loaded) {
+            var oldImg1 = document.querySelector('img[name="firstpic"]');
+            var oldImg2 = document.querySelector('img[name="secondpic"]');
+
+            // Replace the existing image elements with the new ones
+            oldImg1.parentNode.replaceChild(img, oldImg1);
+            oldImg2.parentNode.replaceChild(img2, oldImg2);
+        }
+    }
 	</script>
 	</body>
 </html>
