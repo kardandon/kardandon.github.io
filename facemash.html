@@ -74,10 +74,10 @@
 	</div>
 	<script>
 		var img = new Image();
-		img.src = "https://thispersondoesnotexist.com/image";
+		img.src = "https://thispersondoesnotexist.com";
 		window.setTimeout(function () {
 		var img2 = new Image();
-		img2.src = "https://thispersondoesnotexist.com/image?cache=" + new Date().getTime();
+		img2.src = "https://thispersondoesnotexist.com?cache=" + new Date().getTime();
 		img2.onload = function() {
 			document.querySelector('img[name="firstpic"]').src = img.src;
 			document.querySelector('img[name="secondpic"]').src = img2.src;
